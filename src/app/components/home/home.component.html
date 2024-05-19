@@ -14,7 +14,7 @@
       <div class="btnBox">
         <ul>
           <li>
-            <a href="">See Rates</a>
+            <a (click)="getCrypto()">See Rates</a>
           </li>
         </ul>
       </div>
@@ -23,6 +23,9 @@
   <section class="rightSide">
     <div class="photoSide">
       <img src="assets/diagram.png" alt="diagram" draggable="false" />
+    </div>
+    <div class="info" *ngIf="cryptoData">
+      <!-- test to display crypto info  -->
     </div>
   </section>
 </main>
