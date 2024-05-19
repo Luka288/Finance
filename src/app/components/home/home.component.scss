@@ -1,0 +1,26 @@
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: #232f3e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  section.leftSide {
+    h1,
+    h3 {
+      color: ghostwhite;
+      user-select: none;
+    }
+  }
+
+  section.rightSide {
+    width: 570px;
+    height: 500px;
+
+    img {
+      width: 570px;
+      height: 500px;
+    }
+  }
+}
