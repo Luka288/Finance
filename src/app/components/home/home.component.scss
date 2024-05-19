@@ -7,10 +7,20 @@ main {
   align-items: center;
 
   section.leftSide {
-    h1,
-    h3 {
+    font-family: "Roboto", "sans-serif";
+    h1 {
       color: ghostwhite;
       user-select: none;
+      font-size: 46px;
+    }
+    .textBox {
+      width: 500px;
+      max-width: 500px;
+      color: ghostwhite;
+
+      p {
+        font-size: 20px;
+      }
     }
   }
 
@@ -21,6 +31,7 @@ main {
     img {
       width: 570px;
       height: 500px;
+      user-select: none;
     }
   }
 }
