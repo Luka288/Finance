@@ -21,6 +21,39 @@ main {
       p {
         font-size: 20px;
       }
+
+      .btnBox {
+        display: flex;
+        justify-content: center;
+
+        ul {
+          border: 2px solid white;
+          width: 170px;
+          text-align: center;
+          transition: ease-out 0.1s;
+          li {
+            list-style: none;
+            a {
+              display: flex;
+              text-decoration: none;
+              text-transform: uppercase;
+              letter-spacing: 4.3px;
+              color: ghostwhite;
+              width: 100%;
+            }
+
+            a:hover {
+              color: black;
+              transition: ease-in 0.15s;
+            }
+          }
+        }
+
+        ul:hover {
+          background-color: white;
+          transition: ease-in 0.1s;
+        }
+      }
     }
   }
 

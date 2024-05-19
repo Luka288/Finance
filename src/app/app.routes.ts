@@ -11,4 +11,10 @@ export const routes: Routes = [
         loadComponent: () => import('./components/home/home.component'),
         title: 'Finance | Home'
     },
+    {
+        path: '**',
+        loadComponent: () => import('./components/not-found/not-found.component'),
+        title: 'Finance | 404'
+    },
+
 ];
