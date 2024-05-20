@@ -15,4 +15,3 @@ export interface CryptoResponse {
     }[];
     timestamp: number;
   }
-  

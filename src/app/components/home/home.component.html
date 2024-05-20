@@ -14,19 +14,23 @@
       <div class="btnBox">
         <ul>
           <li>
-            <a (click)="getCrypto()">See Rates</a>
+            <a>See Rates</a>
           </li>
         </ul>
       </div>
     </div>
   </section>
+
   <section class="rightSide">
     <div class="photoSide">
       <img src="assets/diagram.png" alt="diagram" draggable="false" />
     </div>
+  </section>
+
+  <section class="boxes">
     <div class="info" *ngIf="cryptoData">
-      <!-- <div *ngFor="let crypto of cryptoData.data">
-        <h2>{{ crypto.name }} ({{ crypto.symbol }})</h2>
+      <!-- <div *ngFor="let crypto of cryptoData.data"> -->
+      <!-- <h2>{{ crypto.name }} ({{ crypto.symbol }})</h2>
         <p>Rank: {{ crypto.rank }}</p>
         <p>Price (USD): {{ crypto.priceUsd }}</p>
         <p>Market Cap (USD): {{ crypto.marketCapUsd }}</p>
@@ -34,9 +38,147 @@
         <p>Change (24Hr %): {{ crypto.changePercent24Hr }}</p>
         <p>Supply: {{ crypto.supply }}</p>
         <p *ngIf="crypto.maxSupply">Max Supply: {{ crypto.maxSupply }}</p>
-        <p>VWAP (24Hr): {{ crypto.vwap24Hr }}</p>
-      </div> -->
-      <h1>{{ cryptoData.data.id }}</h1>
+        <p>VWAP (24Hr): {{ crypto.vwap24Hr }}</p> -->
+      <!-- <h1>{{ cryptoData.data[0].id }}</h1> -->
+      <!-- </div> -->
+      <!-- <h1>{{ cryptoData.data[0].id.toUpperCase() }}</h1>
+      <h1>{{ cryptoData.data[0].maxSupply }}</h1> -->
+      <div class="card bg-dark" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ cryptoData.data[0].name }} {{ cryptoData.data[0].symbol }}
+          </h5>
+          <h6 class="card-subtitle mb-2 text-body-light">
+            {{ cryptoData.data[0].rank }}
+          </h6>
+          <p class="card-text">
+            {{ cryptoData.data[0].priceUsd }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[0].marketCapUsd }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[0].volumeUsd24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[0].changePercent24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[0].supply }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[0].maxSupply }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[0].vwap24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[0].id }}
+          </p>
+        </div>
+      </div>
+      <div class="card bg-dark" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ cryptoData.data[1].name }} {{ cryptoData.data[1].symbol }}
+          </h5>
+          <h6 class="card-subtitle mb-2 text-body-light">
+            {{ cryptoData.data[1].rank }}
+          </h6>
+          <p class="card-text">
+            {{ cryptoData.data[1].priceUsd }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[1].marketCapUsd }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[1].volumeUsd24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[1].changePercent24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[1].supply }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[1].maxSupply }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[1].vwap24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[1].id }}
+          </p>
+        </div>
+      </div>
+      <div class="card bg-dark" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ cryptoData.data[2].name }} {{ cryptoData.data[2].symbol }}
+          </h5>
+          <h6 class="card-subtitle mb-2 text-body-light">
+            {{ cryptoData.data[2].rank }}
+          </h6>
+          <p class="card-text">
+            {{ cryptoData.data[2].priceUsd }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[2].marketCapUsd }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[2].volumeUsd24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[2].changePercent24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[2].supply }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[2].maxSupply }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[2].vwap24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[2].id }}
+          </p>
+        </div>
+      </div>
+      <div class="card bg-dark" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ cryptoData.data[3].name }} {{ cryptoData.data[3].symbol }}
+          </h5>
+          <h6 class="card-subtitle mb-2 text-body-light">
+            {{ cryptoData.data[3].rank }}
+          </h6>
+          <p class="card-text">
+            {{ cryptoData.data[3].priceUsd }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[3].marketCapUsd }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[3].volumeUsd24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[3].changePercent24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[3].supply }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[3].maxSupply }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[3].vwap24Hr }}
+          </p>
+          <p class="card-text">
+            {{ cryptoData.data[3].id }}
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
