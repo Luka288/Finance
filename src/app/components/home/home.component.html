@@ -25,7 +25,18 @@
       <img src="assets/diagram.png" alt="diagram" draggable="false" />
     </div>
     <div class="info" *ngIf="cryptoData">
-      <!-- test to display crypto info  -->
+      <!-- <div *ngFor="let crypto of cryptoData.data">
+        <h2>{{ crypto.name }} ({{ crypto.symbol }})</h2>
+        <p>Rank: {{ crypto.rank }}</p>
+        <p>Price (USD): {{ crypto.priceUsd }}</p>
+        <p>Market Cap (USD): {{ crypto.marketCapUsd }}</p>
+        <p>Volume (24Hr USD): {{ crypto.volumeUsd24Hr }}</p>
+        <p>Change (24Hr %): {{ crypto.changePercent24Hr }}</p>
+        <p>Supply: {{ crypto.supply }}</p>
+        <p *ngIf="crypto.maxSupply">Max Supply: {{ crypto.maxSupply }}</p>
+        <p>VWAP (24Hr): {{ crypto.vwap24Hr }}</p>
+      </div> -->
+      <h1>{{ cryptoData.data[0].id }}</h1>
     </div>
   </section>
 </main>

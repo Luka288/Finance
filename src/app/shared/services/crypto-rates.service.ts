@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { CryptoResponse, crypto } from '../interfaces/cryptoInter';
+import { CryptoResponse } from '../interfaces/cryptoInter';
 
 @Injectable({
   providedIn: 'root'
