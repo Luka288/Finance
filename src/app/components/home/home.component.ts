@@ -15,7 +15,7 @@ export default class HomeComponent {
 
     readonly cryptoArray: CryptoResponse[] = [];
 
-    cryptoData: CryptoResponse | null = null;
+    cryptoData: CryptoResponse  | null = null;
 
     getCrypto(){
       return this.cryptoRequest.getCrypto().subscribe((res) => {
