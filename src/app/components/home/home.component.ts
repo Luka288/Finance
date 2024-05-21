@@ -24,6 +24,7 @@ ngOnInit(): void {
     getCrypto(){
       return this.cryptoRequest.getCrypto().subscribe((res) => {
         this.cryptoData = res;
+        console.log(this.cryptoData)
       })
     }
 }
