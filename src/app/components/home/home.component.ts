@@ -18,13 +18,16 @@ export default class HomeComponent implements OnInit {
     cryptoData: CryptoResponse  | null = null;
 
 ngOnInit(): void {
-  this.getCrypto();
+    this.getCrypto();
 }
 
-    getCrypto(){
-      return this.cryptoRequest.getCrypto().subscribe((res) => {
-        this.cryptoData = res;
+  getCrypto(){
+    return this.cryptoRequest.getCrypto().subscribe((res) => {
+      this.cryptoData = res;
         console.log(this.cryptoData)
-      })
-    }
+    })
+  }
 }
+
+
+// !! gasketebelia live update !
