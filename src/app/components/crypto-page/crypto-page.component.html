@@ -1,7 +1,20 @@
 <main>
   <section class="cryptoGrid">
     <div class="cryptoBoxes" *ngFor="let cryptoInfo of crypto">
-      <h1>{{ crypto[0].data }}</h1>
+      <div *ngFor="let dataItem of cryptoInfo.data">
+        <h1>test</h1>
+      </div>
     </div>
+  </section>
+  <section class="pagination">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
   </section>
 </main>

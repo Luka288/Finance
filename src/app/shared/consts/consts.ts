@@ -1,0 +1,1 @@
+export const CryptoURL = 'https://api.coincap.io/v2/assets';
