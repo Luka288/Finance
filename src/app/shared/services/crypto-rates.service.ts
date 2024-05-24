@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { CryptoResponse } from '../interfaces/cryptoInter';
 import { CryptoURL } from '../consts';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,8 @@ import { CryptoURL } from '../consts';
 export class CryptoRatesService {
   private readonly http = inject(HttpClient)
   readonly URL = CryptoURL;
-
-  getCrypto(){
-    return this.http.get<CryptoResponse>(`${this.URL}?limit=5&page=1`)
+  
+  getCrypto(limit: number, offset: number): Observable<CryptoResponse>{
+    return this.http.get<CryptoResponse>(`${this.URL}?limit=${limit}&offset=${offset}`)
   }
 }

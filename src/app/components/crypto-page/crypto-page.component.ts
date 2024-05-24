@@ -15,15 +15,27 @@ export default class CryptoPageComponent implements OnInit{
   private readonly request = inject(CryptoRatesService)
 
   crypto: CryptoResponse[] = [];
+  limit: number = 5;
+  offset: number = 5;  
 
   ngOnInit(): void {
     this.loadCrypto();
   }
 
   loadCrypto(){
-    this.request.getCrypto().subscribe((res) => {
+    this.request.getCrypto(this.limit, this.offset).subscribe((res) => {
       this.crypto.push(res)
+      this.crypto = this.crypto.concat(res);
+      this.offset += this.limit;
       console.log(this.crypto)
     })
+  }
+
+  loadMore(){
+    this.loadCrypto();
+  }
+
+  loadLess(){
+    
   }
 }
