@@ -16,7 +16,7 @@ export default class CryptoPageComponent implements OnInit{
 
   crypto: CryptoResponse[] = [];
   limit: number = 5;
-  offset: number = 5;  
+  offset: number = 0;  
 
   ngOnInit(): void {
     this.loadCrypto();
@@ -36,6 +36,6 @@ export default class CryptoPageComponent implements OnInit{
   }
 
   loadLess(){
-    
+
   }
 }

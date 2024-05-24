@@ -2,7 +2,8 @@
   <section class="cryptoGrid">
     <div class="cryptoBoxes" *ngFor="let cryptoInfo of crypto">
       <div *ngFor="let dataItem of cryptoInfo.data">
-        <h1>test</h1>
+        <h1>{{ dataItem.id }}</h1>
+        <h1>{{ dataItem.priceUsd }}</h1>
       </div>
     </div>
   </section>
