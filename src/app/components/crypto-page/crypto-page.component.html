@@ -1,9 +1,24 @@
 <main>
   <section class="cryptoGrid">
-    <div class="cryptoBoxes" *ngFor="let cryptoInfo of crypto">
-      <div *ngFor="let dataItem of cryptoInfo.data">
-        <h1>{{ dataItem.id }}</h1>
-        <h1>{{ dataItem.priceUsd }}</h1>
+    <div class="cryptoBoxes">
+      <div class="tableWrap">
+        <table class="table table-dark table-bordered">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Position</th>
+              <th scope="col">Crypto</th>
+              <th scope="col">Price In usd</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let cryptoInfo of crypto">
+            <tr *ngFor="let dataItem of cryptoInfo.data; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ dataItem.name }}</td>
+              <td>{{ dataItem.priceUsd }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

@@ -5,5 +5,11 @@ main {
 
   section.cryptoGrid {
     color: white;
+
+    .cryptoBoxes {
+      .tableWrap {
+        width: 50%;
+      }
+    }
   }
 }
