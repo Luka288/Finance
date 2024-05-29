@@ -5,15 +5,13 @@
         <table class="table table-dark">
           <thead class="table-dark">
             <tr>
-              <th scope="col">Position</th>
               <th scope="col">Crypto</th>
               <th scope="col">Price In usd</th>
               <th scope="col">24 Hour Change</th>
             </tr>
           </thead>
           <tbody *ngFor="let cryptoInfo of crypto">
-            <tr *ngFor="let dataItem of cryptoInfo.data; let i = index">
-              <th scope="row">{{ i + 1 }}</th>
+            <tr *ngFor="let dataItem of cryptoInfo.data">
               <td>{{ dataItem.name }} ( {{ dataItem.symbol }} )</td>
               <td>{{ dataItem.priceUsd | number : "1.2-2" }} USD</td>
               <td>{{ dataItem.changePercent24Hr | number : "1.3-3" }} %</td>
