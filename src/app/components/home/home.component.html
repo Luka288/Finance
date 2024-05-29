@@ -41,7 +41,7 @@
           </h6>
           <p class="card-text">
             <span>Price (USD):</span>
-            {{ cryptoData.data[0].priceUsd }}
+            {{ cryptoData.data[0].priceUsd | number : "1.2-2" }}
           </p>
           <p class="card-text">
             <span>Market Cap (USD):</span>
@@ -80,7 +80,7 @@
           </h6>
           <p class="card-text">
             <span>Price (USD):</span>
-            {{ cryptoData.data[1].priceUsd }}
+            {{ cryptoData.data[1].priceUsd | number : "1.2-2" }}
           </p>
           <p class="card-text">
             <span>Market Cap (USD):</span>
@@ -119,7 +119,7 @@
           </h6>
           <p class="card-text">
             <span>Price (USD):</span>
-            {{ cryptoData.data[2].priceUsd }}
+            {{ cryptoData.data[2].priceUsd | number : "1.2-2" }} $
           </p>
           <p class="card-text">
             <span>Market Cap (USD):</span>
