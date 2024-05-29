@@ -22,13 +22,11 @@ export default class CryptoPageComponent implements OnInit{
 
   ngOnInit(): void {
   this.loadCrypto();
-  const interval$ = interval(10000); // 60000 milliseconds = 1 minute
-
-  interval$.pipe(
-    take(1)
-  ).subscribe(() => {
-    this.loadCrypto();
-  });
+  
+  // const interval$ = interval(10000); // 60000 milliseconds = 1 minute
+  // interval$.subscribe(() => {
+  //   this.loadCrypto();
+  // });
   }
 
   loadCrypto(){
