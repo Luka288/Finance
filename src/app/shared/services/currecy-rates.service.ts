@@ -15,5 +15,4 @@ export class CurrecyRatesService {
   getRates(){
     return this.http.get<currecnyRates>(`${this.url}`);
   }
-
 }

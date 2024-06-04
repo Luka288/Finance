@@ -30,6 +30,4 @@ export default class CurrencyChangeComponent implements OnInit {
       console.log(res)
     })
   }
-
-
 }
