@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CurrencyFetchService } from '../../shared/services/currency-fetch.service';
 import { RouterModule } from '@angular/router';
+import { CurrecyRatesService } from '../../shared/services/currecy-rates.service';
 
 @Component({
   selector: 'app-currency-change',
@@ -11,9 +12,10 @@ import { RouterModule } from '@angular/router';
 })
 export default class CurrencyChangeComponent implements OnInit {
   private readonly request = inject(CurrencyFetchService)
+  private readonly rates = inject(CurrecyRatesService)
 
   ngOnInit(): void {
-    this.getInfo()
+    this.loadRates()
   }
 
   getInfo(){
@@ -21,4 +23,13 @@ export default class CurrencyChangeComponent implements OnInit {
       console.log(res)
     })
   }
+
+
+  loadRates(){
+    this.rates.getRates().subscribe((res) => {
+      console.log(res)
+    })
+  }
+
+
 }
