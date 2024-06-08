@@ -23,9 +23,8 @@
             <td>mdo</td>
           </tr>
           <tr *ngFor="let dataItem of currency">
-            <td>{{ dataItem.rates }}</td>
-            <td>Otto</td>
-            <td>mdo</td>
+            <td>{{ dataItem.base_code }}</td>
+            <td>{{ dataItem.conversion_rates.USD }}</td>
           </tr>
         </tbody>
       </table>

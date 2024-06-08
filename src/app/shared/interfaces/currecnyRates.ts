@@ -3,6 +3,28 @@ export interface currecnyRates {
     base: string,
     date: string,
     rates: {
-        
+
     },
+}
+
+export interface exchangeCurrecy { 
+    result: string;
+    documentation: string;
+    terms_of_use: string;
+    time_last_update_unix: number;
+    time_last_update_utc: string;
+    time_next_update_unix: number;
+    time_next_update_utc: string;
+    base_code: string;
+    conversion_rates: {
+        USD: number,
+		AUD: number,
+		BGN: number,
+		CAD: number,
+		CHF: number,
+		CNY: number,
+		EGP: number,
+		EUR: number,
+		GBP: number,
+    };
 }

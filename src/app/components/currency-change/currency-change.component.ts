@@ -3,7 +3,7 @@ import { CurrencyFetchService } from '../../shared/services/currency-fetch.servi
 import { RouterModule } from '@angular/router';
 import { CurrecyRatesService } from '../../shared/services/currecy-rates.service';
 import { MatInputModule } from '@angular/material/input';
-import { currecnyRates } from '../../shared/interfaces';
+import { currecnyRates, exchangeCurrecy } from '../../shared/interfaces';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -17,7 +17,7 @@ export default class CurrencyChangeComponent implements OnInit {
   private readonly request = inject(CurrencyFetchService)
   private readonly rates = inject(CurrecyRatesService)
 
-  currency: currecnyRates[] = [];
+  currency: exchangeCurrecy[] = [];
   
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export default class CurrencyChangeComponent implements OnInit {
   loadRates(){
     this.rates.getRates().subscribe((res) => {
       this.currency.push(res)
-      console.log(this.currency)
+      console.log(res)
     })
   }
 }
