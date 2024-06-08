@@ -1,1 +1,29 @@
-<h1>under development</h1>
+<main>
+  <section class="searchSection">
+    <div class="inputBox">
+      <div class="insideWrap">
+        <div class="input-group mb-3">
+          <span class="input-group-text"></span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Dollar amount (with dot and two decimal places)"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="currencys">
+    <div class="secondBox">
+      <table class="table table-sm">
+        <tbody *ngFor="let cryptoInfo of crypto">
+          <tr *ngFor="let dataItem of cryptoInfo.data">
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mdo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>

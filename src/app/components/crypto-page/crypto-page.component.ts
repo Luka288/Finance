@@ -40,8 +40,4 @@ export default class CryptoPageComponent implements OnInit{
   loadMore(){
     this.loadCrypto();
   }
-
-  loadLess(){
-
-  }
 }

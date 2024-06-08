@@ -1,0 +1,23 @@
+main {
+  section.searchSection {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .insideWrap {
+      width: 500px;
+    }
+  }
+  section.currencys {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    .secondBox {
+      width: 55%;
+    }
+  }
+}
