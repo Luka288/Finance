@@ -16,9 +16,14 @@
   <section class="currencys">
     <div class="secondBox">
       <table class="table table-sm">
-        <tbody *ngFor="let cryptoInfo of crypto">
-          <tr *ngFor="let dataItem of cryptoInfo.data">
-            <td>Mark</td>
+        <tbody *ngFor="let currencyInfo of currency">
+          <tr *ngFor="let dataItem of currency">
+            <td>Currency</td>
+            <td>Otto</td>
+            <td>mdo</td>
+          </tr>
+          <tr *ngFor="let dataItem of currency">
+            <td>{{ dataItem.rates }}</td>
             <td>Otto</td>
             <td>mdo</td>
           </tr>

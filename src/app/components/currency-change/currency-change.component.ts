@@ -4,13 +4,12 @@ import { RouterModule } from '@angular/router';
 import { CurrecyRatesService } from '../../shared/services/currecy-rates.service';
 import { MatInputModule } from '@angular/material/input';
 import { currecnyRates } from '../../shared/interfaces';
-import { JsonPipe } from '@angular/common';
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-currency-change',
   standalone: true,
-  imports: [RouterModule, MatInputModule],
+  imports: [RouterModule, MatInputModule, CommonModule],
   templateUrl: './currency-change.component.html',
   styleUrl: './currency-change.component.scss'
 })
@@ -28,7 +27,8 @@ export default class CurrencyChangeComponent implements OnInit {
 
   loadRates(){
     this.rates.getRates().subscribe((res) => {
-      console.log(res)
+      this.currency.push(res)
+      console.log(this.currency)
     })
   }
 }
