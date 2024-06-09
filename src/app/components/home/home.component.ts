@@ -4,6 +4,7 @@ import { CryptoRatesService } from '../../shared/services/crypto-rates.service';
 import { CryptoResponse } from '../../shared/interfaces/cryptoInter';
 import { RouterModule } from '@angular/router';
 import { StaticCruptoRequestService } from '../../shared/services/static-crypto-request.service';
+import { DateDisplay } from '../../shared/interfaces';
 
 @Component({
   selector: 'app-home',

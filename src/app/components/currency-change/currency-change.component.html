@@ -1,4 +1,8 @@
 <main>
+  <div class="updateDate" *ngIf="dateDisplay">
+    <h4>{{ dateDisplay.time_last_update_utc }} Last time update (UTC)</h4>
+    <h4>{{ dateDisplay.time_next_update_utc }} Next update time (UTC)</h4>
+  </div>
   <section class="searchSection">
     <div class="inputBox">
       <div class="insideWrap">
@@ -26,8 +30,7 @@
         <tbody>
           <tr>
             <td>Currency</td>
-            <td>Otto</td>
-            <td>mdo</td>
+            <td>Value</td>
           </tr>
           <tr *ngFor="let currency of currencies | keyvalue">
             <td>{{ currency.key }}</td>

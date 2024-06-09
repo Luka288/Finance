@@ -3,7 +3,7 @@ import { CurrencyFetchService } from '../../shared/services/currency-fetch.servi
 import { RouterModule } from '@angular/router';
 import { CurrecyRatesService } from '../../shared/services/currecy-rates.service';
 import { MatInputModule } from '@angular/material/input';
-import { CurrencyRates } from '../../shared/interfaces';
+import { CurrencyRates, DateDisplay } from '../../shared/interfaces';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -19,6 +19,7 @@ export default class CurrencyChangeComponent implements OnInit {
 
   currencies: CurrencyRates | null = null;
   baseDisplay: string | null = null;
+  dateDisplay: DateDisplay | null = null;
   base = 'GEL'
 
   ngOnInit(): void {
@@ -39,6 +40,7 @@ export default class CurrencyChangeComponent implements OnInit {
     this.rates.getRates(inputValue).subscribe((res) => {
       this.currencies = res.conversion_rates;
       this.baseDisplay = res.base_code
+      this.dateDisplay = res
       console.log(res);
     });
   }
