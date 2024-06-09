@@ -16,15 +16,15 @@
   <section class="currencys">
     <div class="secondBox">
       <table class="table table-sm">
-        <tbody *ngFor="let currencyInfo of currency">
-          <tr *ngFor="let dataItem of currency">
+        <tbody>
+          <tr>
             <td>Currency</td>
             <td>Otto</td>
             <td>mdo</td>
           </tr>
-          <tr *ngFor="let dataItem of currency">
-            <td>{{ dataItem.base_code }}</td>
-            <td>{{ dataItem.conversion_rates.USD }}</td>
+          <tr *ngFor="let currency of currencies | keyvalue">
+            <td>{{ currency.key }}</td>
+            <td>{{ currency.value }}</td>
           </tr>
         </tbody>
       </table>

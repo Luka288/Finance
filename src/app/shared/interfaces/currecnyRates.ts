@@ -1,13 +1,8 @@
-export interface currecnyRates {
-    amount: number,
-    base: string,
-    date: string,
-    rates: {
-
-    },
-}
-
-export interface exchangeCurrecy { 
+export interface CurrencyRates {
+    [currency: string]: number;
+  }
+  
+  export interface ExchangeRateResponse {
     result: string;
     documentation: string;
     terms_of_use: string;
@@ -16,15 +11,6 @@ export interface exchangeCurrecy {
     time_next_update_unix: number;
     time_next_update_utc: string;
     base_code: string;
-    conversion_rates: {
-        USD: number,
-		AUD: number,
-		BGN: number,
-		CAD: number,
-		CHF: number,
-		CNY: number,
-		EGP: number,
-		EUR: number,
-		GBP: number,
-    };
-}
+    conversion_rates: CurrencyRates;
+  }
+  

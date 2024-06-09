@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { currencyExchanges, currencyRate } from '../consts';
-import { currecnyRates, exchangeCurrecy } from '../interfaces';
+import { CurrencyRates, ExchangeRateResponse } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,6 @@ export class CurrecyRatesService {
 
 
   getRates(){
-    return this.http.get<exchangeCurrecy>(`${this.exchangeURL}`);
+    return this.http.get<ExchangeRateResponse>(`${this.exchangeURL}`);
   }
 }
