@@ -18,6 +18,7 @@ export default class CurrencyChangeComponent implements OnInit {
   private readonly rates = inject(CurrecyRatesService)
 
   currencies: CurrencyRates | null = null;
+  baseDisplay: string | null = null;
   base = 'GEL'
 
   ngOnInit(): void {
@@ -37,6 +38,7 @@ export default class CurrencyChangeComponent implements OnInit {
   
     this.rates.getRates(inputValue).subscribe((res) => {
       this.currencies = res.conversion_rates;
+      this.baseDisplay = res.base_code
       console.log(res);
     });
   }

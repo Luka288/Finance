@@ -20,7 +20,7 @@ export default class HomeComponent implements OnInit {
 
     limit: number = 5;
     offset: number = 5;  
-    cryptoData: CryptoResponse  | null = null;
+    cryptoData: CryptoResponse | null = null;
 
 ngOnInit(): void {
     this.loadStatic();

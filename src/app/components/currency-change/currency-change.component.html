@@ -2,8 +2,8 @@
   <section class="searchSection">
     <div class="inputBox">
       <div class="insideWrap">
-        <div class="input-group mb-3">
-          <span class="input-group-text">{{ base }}</span>
+        <div class="input-group mb-3" *ngIf="baseDisplay">
+          <span class="input-group-text">{{ baseDisplay }}</span>
           <input
             type="text"
             class="form-control"
