@@ -8,6 +8,17 @@ main {
 
     .insideWrap {
       width: 500px;
+
+      .infoContainer {
+        text-align: center;
+
+        P {
+          font-size: 19px;
+        }
+        .currencyDisplay {
+          color: red;
+        }
+      }
     }
   }
   section.currencys {
