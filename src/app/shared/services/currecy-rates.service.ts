@@ -14,7 +14,7 @@ export class CurrecyRatesService {
   private readonly exchangeURL = currencyExchanges;
 
 
-  getRates(){
-    return this.http.get<ExchangeRateResponse>(`${this.exchangeURL}`);
+  getRates(event: string){
+    return this.http.get<ExchangeRateResponse>(`${this.exchangeURL}/${event}`);
   }
 }

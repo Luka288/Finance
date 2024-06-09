@@ -3,10 +3,11 @@
     <div class="inputBox">
       <div class="insideWrap">
         <div class="input-group mb-3">
-          <span class="input-group-text"></span>
+          <span class="input-group-text">{{ base }}</span>
           <input
             type="text"
             class="form-control"
+            (input)="loadRates($event)"
             aria-label="Dollar amount (with dot and two decimal places)"
           />
         </div>
